@@ -1,0 +1,63 @@
+extends layout
+
+block content
+  h1= title
+
+  div(class="col-md-4")
+    h2 Create user
+
+    form(action="/users/create", method="post", class="well")
+      div(class="form-group")
+        label(for="username")
+          | Username
+        input(type="text", name="username", class="form-control")
+      input(type="submit" class="btn btn-default")
+
+  //- div(class="col-md-4")
+    h2 Users in Teamjide
+
+    ul
+      each user in users
+        li
+          strong
+            = user.username
+          | &nbsp;
+          a(href="/users/" + user.id + "/destroy", class="btn btn-xs btn-warning") delete user
+          ul
+            li
+              | Create a teamjide record
+              form(action="/users/" + user.id + "/teamjides/create", method="post", class="form-inline")
+                div(class="form-group")
+                  input(type="text", name="name", class="input-sm form-control")
+                  input(type="submit", class="btn btn-sm btn-default")
+            each teamjide in user.Teamjides
+              li
+                strong
+                  = teamjide.name
+                | &nbsp;
+                a(href="/users/" + user.id + "/teamjides/" + teamjide.id + "/destroy",  class="btn btn-xs btn-warning") delete 
+  
+  div(class="col-md-4")
+    h2 Users in Teamsanmi
+
+    ul
+      each user in users
+        li
+          strong
+            = user.username
+          | &nbsp;
+          a(href="/users/" + user.id + "/destroy", class="btn btn-xs btn-warning") delete user
+          ul
+            li
+              | Create a teamsanmi record
+              form(action="/users/" + user.id + "/teamsanmis/create", method="post", class="form-inline")
+                div(class="form-group")
+                  input(type="text", name="name", class="input-sm form-control")
+                  input(type="submit", class="btn btn-sm btn-default")
+            each teamsanmi in user.Teamsanmis
+              li
+                strong
+                  = teamsanmi.name
+                | &nbsp;
+                a(href="/users/" + user.id + "/teamsanmis/" + teamsanmi.id + "/destroy",  class="btn btn-xs btn-warning") delete 
+  
