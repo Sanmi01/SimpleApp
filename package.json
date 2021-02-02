@@ -29,5 +29,20 @@
     "mocha": "^3.0.2",
     "nodemon": "^2.0.7",
     "supertest": "^2.0.0"
-  }
+  },
+  "description": "This repository demonstrates the usage of Sequelize within an [Express](https://expressjs.com) application. The implemented logic is a simple task tracking tool.",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sanmi01/SimpleApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sanmi01/SimpleApp/issues"
+  },
+  "homepage": "https://github.com/Sanmi01/SimpleApp#readme"
 }
