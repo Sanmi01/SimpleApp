@@ -9,7 +9,7 @@ var routes = require('./routes/index');
 var users  = require('./routes/users');
 var timesheets  = require('./routes/timesheets');
 var teamsanmis  = require('./routes/teamsanmis');
-var teamjides  = require('./routes/teamjides');
+// var teamjides  = require('./routes/teamjides');
 
 var app = express();
 
@@ -29,7 +29,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/timesheets', timesheets);
 app.use('/teamsanmis', teamsanmis);
-app.use('/teamjides', teamjides);
+// app.use('/teamjides', teamjides);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
