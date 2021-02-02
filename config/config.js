@@ -20,8 +20,8 @@ module.exports = {
     // database: process.env.DB_NAME,
     // host: process.env.DB_HOSTNAME,
     // dialect: 'postgres' 
-    username: "traineeUser",
-    password: "traineePassword",
+    username: "manifestUser",
+    password: "manifestPassword",
     database: "SimpleBlogDB",
     host: "manifestdbinstance.cgq0reqixqsd.us-east-1.rds.amazonaws.com",
     dialect: 'postgres' 
